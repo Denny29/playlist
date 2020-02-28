@@ -1,9 +1,29 @@
+body{
+    /* display: flex; */
+}
 .service{
-    display:none;
-    height: 40%;
-    
+    display:none;   
 }
 
-/* .add{
-    display:none;
-} */
+#block{
+    display: block;
+}
+
+.inputs{
+    width: 25%;
+}
+
+.addSongs{
+    justify-content: flex-start;
+}
+.songName{
+    font
+}
+
+.playlist{
+    width: 75%;
+}
+
+.addButton{
+    height: 25%;
+}
