@@ -7,41 +7,36 @@
     </head>
     <body>
         
-        <div class="title">
-            <h1 class="easterEgg">My</h1>
-            <h1 class="title">playlist</h1>
+        <div class="title">       
+            <h1 class="easterEgg">My playlist<h1>
+        </div>
+
+        <div class="songs">
+            <button class="addButton" id="block">Add videos</button>       
+            <div class="inputs" style="display:none;">
+            
+            <!-- Inputs are hidden here -->
+            <div> <input class="song" placeholder="Song name"> </div>
+            <div> <input class="artist" placeholder="Artist(s)"> </div>
+            <div> <input class="length" placeholder="Song duration"> </div>
+            <div> <input class="albumCover" placeholder="Album cover"> </div>
+            <div> <input class="videoLink" placeholder="Link"> </div>
+            <div> <button class="confirm"> Add song </div>
+            </div>
+
+            <div class="songs"> 
+                <!-- Song names are displayed here -->
+            </div>
+        
         </div>
         
-        <div class="page">
-        
-            <div class="songs">
-                <img class="service" src="https://ak2.picdn.net/shutterstock/videos/507802/thumb/1.jpg">
-                <button class="addButton" id="block">Add videos</button>       
-                <div class="inputs" style="display:none;">
-            
-                <!-- Inputs are hidden here -->
-                <div> <input class="song" placeholder="Song name"> </div>
-                <div> <input class="artist" placeholder="Artist(s)"> </div>
-                <div> <input class="length" placeholder="Song duration"> </div>
-                <div> <input class="albumCover" placeholder="Album cover"> </div>
-                <div> <input class="videoLink" placeholder="Link"> </div>
-                <div> <button class="confirm"> Add song </div>
-                </div>
-
-                <div class="songs"> 
-                    <!-- Song names are displayed here -->
-                </div>
-        
-            </div>
-        
-            <div class="playlist">
-                <!-- More song details -->
-                <div class="artistName"> <h3></h3> </div>
-                <div class="picture"> </div>
-                <img class="playButton" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg">
-                <p class="timeStamp"></p>
-                <marquee class="songName"></marquee>
-            </div>
+        <div class="playlist">
+            <!-- More song details -->
+            <div class="artistName"> <h3></h3> </div>
+            <div class="picture"> </div>
+            <img class="playButton" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg">
+            <p class="timeStamp"></p>
+            <marquee class="songName"></marquee>
         </div>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>

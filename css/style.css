@@ -1,8 +1,5 @@
-.page{
-    display: flex; 
-}
-.service{
-    display:none;   
+body{
+    display: flex;
 }
 
 #block{
@@ -26,4 +23,7 @@
 
 .addButton{
     height: 25%;
+}
+.playButton{
+    height: 50%;
 }
