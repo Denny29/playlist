@@ -1,17 +1,11 @@
-// $(".communism").hover(function(){
-    // $(".service").show();
-    // $(".service").css("background-image: url('https://ak2.picdn.net/shutterstock/videos/507802/thumb/1.jpg');"); Background img easter egg
-// });
+$(".easterEgg").hover(function(){
+    $(".easterEgg").html("Our");
+    $(".body").css("background-image: url('https://ak2.picdn.net/shutterstock/videos/507802/thumb/1.jpg');");
+ });
 $(".addButton").click(function(){
-    $(".addSongs").show();
+    $(".inputs").show();
 });
 
-let song = $(".song").val();
-let artist = $(".artist").val();
-let length = $(".length").val();
-let albumCover = $(".albumCover").val();
-let videoLink = $(".videoLink").val();
-
 $(".confirm").click(function(){
-    $(".songs").append('<div>'+song+'</div>');
+    $(".inputs").show();
 });
