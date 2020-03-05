@@ -6,9 +6,6 @@ body{
     display: block;
 }
 
-.inputs{
-    width: 25%;
-}
 
 .addSongs{
     justify-content: flex-start;
@@ -17,9 +14,6 @@ body{
     font
 }
 
-.playlist{
-    width: 75%;
-}
 
 .addButton{
     height: 25%;
