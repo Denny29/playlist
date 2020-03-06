@@ -18,9 +18,11 @@ artistArray.forEach(function(artists){
 
 $(".easterEgg").click(function(){
     $(".easterEgg").html("Our Playlist");
-    let imageUrl = "communism/commie.jpeg";
+    let imageUrl = ("communism/commie.jpg");
     console.log(imageUrl);
-    $("body").css("background-image", "url(" + imageUrl + ")");
+    $("body").css("background", "url(" + imageUrl + ")");
+    
+        new Audio("file:///workspace/playlist/communism/sovietAnthem.mp3").play();    
  });
 
 
