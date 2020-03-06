@@ -1,9 +1,10 @@
-body{
+.music{
     display: flex;
 }
 
-#block{
-    display: block;
+.songs{
+    display: flex;
+    justify-content: space-around;
 }
 
 

@@ -5,15 +5,15 @@ let song1 = {
     pic : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/BobbyTarantino2.jpg/220px-BobbyTarantino2.jpg",
     link : "https://www.youtube.com/watch?v=n1AepUXMAjk",
 };
-let artistArray= [song1];
+let artistArray = [song1];
 
 artistArray.forEach(function(artists){
     $(".artist-name").append(artists.name);
     $(".artist-artist").append(artists.artist);
     $(".artist-duration").append(artists.duration);
-    $(".artist-pic").append(artists.pic);
-    $(".artist-link").append(artists.link);
-    // console.log(artists);
+    $(".artist-pic").append(`<img src="${artists.pic}">`);
+    $(".artist-link").append(`<a href ="${artists.link}"> Listen</a>`);
+    console.log(artists);
 });
 
 $(".easterEgg").click(function(){
@@ -25,12 +25,12 @@ $(".easterEgg").click(function(){
 
 
 $(".addButton").click(function(){
-    $(".inputs").show();
+    
 });
 
 
 $(".confirm").click(function(){
-    $(".inputs").hide();
+    
     let songName = $(".song").val();
     let songArtist = $(".artist").val();
     let songDuration = $(".length").val();
@@ -44,5 +44,15 @@ $(".confirm").click(function(){
         pic : albumCover,
         link : songLink,
     };
+
+    let songArray = [song];
+
+    songArray.forEach(function(songs){
+        $(".artist-name").append(songs.name);
+        $(".artist-artist").append(songs.artist);
+        $(".artist-duration").append(songs.duration);
+        $(".artist-pic").append(`<img src="${songs.pic}">`);
+        $(".artist-link").append(`<a href ="${artists.link}"> Listen</a>`);
+    });
 
 });
