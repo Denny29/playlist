@@ -30,9 +30,7 @@ $(".addButton").click(function(){
     
 });
 
-
 $(".confirm").click(function(){
-    
     let songName = $(".song").val();
     let songArtist = $(".artist").val();
     let songDuration = $(".length").val();
@@ -46,15 +44,21 @@ $(".confirm").click(function(){
         pic : albumCover,
         link : songLink,
     };
+        let songArray = [song];
 
-    let songArray = [song];
 
-    songArray.forEach(function(songs){
-        $(".artist-name").append(songs.name);
-        $(".artist-artist").append(songs.artist);
-        $(".artist-duration").append(songs.duration);
-        $(".artist-pic").append(`<img src="${songs.pic}">`);
-        $(".artist-link").append(`<a href ="${artists.link}"> Listen</a>`);
-    });
+    $("songs").append(`<div class="${song.name}"> <h2> ${song.name} </h2> </div>`);
 
+    function create(newName){
+        let newName = song
+    }
+    create(song.name);
+});
+
+$(`.${newName.name}`).click(function(){
+    $(".artist-name").html(newName.name);
+    $(".artist-artist").html(newName.artist);
+    $(".artist-duration").html(newName.duration);
+    $(".artist-pic").html(`<img src="${newName.pic}">`);
+    $(".artist-link").html(`<a href ="${newName.link}"> Listen</a>`);
 });
