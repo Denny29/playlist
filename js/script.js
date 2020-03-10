@@ -51,14 +51,13 @@ $(".confirm").click(function(){
 
     function create(newName){
         let newName = song
+        $(`.${newName.name}`).click(function(){
+            $(".artist-name").html(newName.name);
+            $(".artist-artist").html(newName.artist);
+            $(".artist-duration").html(newName.duration);
+            $(".artist-pic").html(`<img src="${newName.pic}">`);
+            $(".artist-link").html(`<a href ="${newName.link}"> Listen</a>`);
+        });
     }
-    create(song.name);
-});
-
-$(`.${newName.name}`).click(function(){
-    $(".artist-name").html(newName.name);
-    $(".artist-artist").html(newName.artist);
-    $(".artist-duration").html(newName.duration);
-    $(".artist-pic").html(`<img src="${newName.pic}">`);
-    $(".artist-link").html(`<a href ="${newName.link}"> Listen</a>`);
+    create(song.val());
 });
