@@ -8,11 +8,11 @@ let song1 = {
 let artistArray = [song1];
 
 artistArray.forEach(function(artists){
-    $(".artist-name").append(artists.name);
-    $(".artist-artist").append(artists.artist);
-    $(".artist-duration").append(artists.duration);
+    $(".artist-name").append(`<h1>${artists.name}</h1>`);
+    $(".artist-artist").append(`<h1>${artists.artist}</h1>`);
+    $(".artist-duration").append(`<h1>${artists.duration}</h1>`);
     $(".artist-pic").append(`<img src="${artists.pic}">`);
-    $(".artist-link").append(`<a href ="${artists.link}"> Listen</a>`);
+    $(".artist-pic").append(`<a href ="${artists.link}"></a>`);
     console.log(artists);
 });
 
@@ -47,10 +47,9 @@ $(".confirm").click(function(){
         let songArray = [song];
 
 
-    $("songs").append(`<div class="${song.name}"> <h2> ${song.name} </h2> </div>`);
+    $(".songs").append(`<div class="${songName}"> <h2> ${songName} </h2> </div>`);
 
     function create(newName){
-        let newName = song
         $(`.${newName.name}`).click(function(){
             $(".artist-name").html(newName.name);
             $(".artist-artist").html(newName.artist);
@@ -59,5 +58,5 @@ $(".confirm").click(function(){
             $(".artist-link").html(`<a href ="${newName.link}"> Listen</a>`);
         });
     }
-    create(song.val());
+    create(song);
 });

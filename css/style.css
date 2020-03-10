@@ -2,23 +2,22 @@
     display: flex;
 }
 
+.inputs{
+    width: 40%;
+}
+
+.playlist{
+    width: 60%;
+}
 .songs{
     display: flex;
     justify-content: space-around;
 }
 
-
 .addSongs{
     justify-content: flex-start;
 }
-.songName{
-    font
-}
 
-
-.addButton{
-    height: 25%;
-}
-.playButton{
-    height: 50%;
+.play{
+    height: 200px;
 }
