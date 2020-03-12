@@ -21,8 +21,10 @@ $(".easterEgg").click(function(){
     let imageUrl = ("communism/commie.jpg");
     console.log(imageUrl);
     $("body").css("background", "url(" + imageUrl + ")");
-    
-        new Audio("file:///workspace/playlist/communism/sovietAnthem.mp3").play();    
+    let soviet = document.getElementById("myAudio"); 
+    function playAudio() { 
+        x.play(); 
+    } 
  });
 
 
