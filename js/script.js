@@ -11,8 +11,8 @@ artistArray.forEach(function(artists){
     $(".artist-name").append(`<h1>${artists.name}</h1>`);
     $(".artist-artist").append(`<h1>${artists.artist}</h1>`);
     $(".artist-duration").append(`<h1>${artists.duration}</h1>`);
-    $(".artist-pic").append(`<img src="${artists.pic}">`);
-    $(".artist-pic").append(`<a href ="${artists.link}"></a>`);
+    $(".artist-pic").append(`<img class="cover" src="${artists.pic}">`);
+    $(".artist-link").append(`<a href ="${artists.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
     console.log(artists);
 });
 
@@ -53,11 +53,11 @@ $(".confirm").click(function(){
 
     function create(newName){
         $(`.${newName.name}`).click(function(){
-            $(".artist-name").html(newName.name);
-            $(".artist-artist").html(newName.artist);
-            $(".artist-duration").html(newName.duration);
-            $(".artist-pic").html(`<img src="${newName.pic}">`);
-            $(".artist-link").html(`<a href ="${newName.link}"> Listen</a>`);
+            $(".artist-name").html(`<h1> ${newName.name} </h1>`);
+            $(".artist-artist").html(`<h1> ${newName.artist} </h1>`);
+            $(".artist-duration").html(`<h1> ${newName.duration} </h1>`);
+            $(".artist-pic").html(`<img class="cover" src="${newName.pic}">`);
+            $(".artist-link").html(`<a href ="${newName.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
         });
     }
     create(song);
