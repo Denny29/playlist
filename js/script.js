@@ -7,14 +7,19 @@ let song1 = {
 };
 let artistArray = [song1];
 
-artistArray.forEach(function(artists){
-    $(".artist-name").append(`<h1>${artists.name}</h1>`);
-    $(".artist-artist").append(`<h1>${artists.artist}</h1>`);
-    $(".artist-duration").append(`<h1>${artists.duration}</h1>`);
-    $(".artist-pic").append(`<img class="cover" src="${artists.pic}">`);
-    $(".artist-link").append(`<a href ="${artists.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
+
+function displayArtist(artistArray){
+    artistArray.forEach(function(artists){
+        $(".artist-name").append(`<h1>${artists.name}</h1>`);
+        $(".artist-artist").append(`<h1>${artists.artist}</h1>`);
+        $(".artist-duration").append(`<h1>${artists.duration}</h1>`);
+        $(".artist-pic").append(`<img class="cover" src="${artists.pic}">`);
+        $(".artist-link").append(`<a href ="${artists.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
     console.log(artists);
-});
+    });
+}
+
+displayArtist(artistArray);
 
 $(".easterEgg").click(function(){
     $(".easterEgg").html("Our Playlist");
@@ -27,11 +32,7 @@ $(".easterEgg").click(function(){
     } 
  });
 
-
-$(".addButton").click(function(){
-    
-});
-
+ 
 $(".confirm").click(function(){
     let songName = $(".song").val();
     let songArtist = $(".artist").val();
@@ -46,19 +47,15 @@ $(".confirm").click(function(){
         pic : albumCover,
         link : songLink,
     };
-        let songArray = [song];
+        // let songArray = [song];
+    artistArray.push(song);
+    console.log(artistArray);
 
+    displayArtist(artistArray);
 
-    $(".songs").append(`<div class="${songName}"> <h2> ${songName} </h2> </div>`);
-
-    function create(newName){
-        $(`.${newName.name}`).click(function(){
-            $(".artist-name").html(`<h1> ${newName.name} </h1>`);
-            $(".artist-artist").html(`<h1> ${newName.artist} </h1>`);
-            $(".artist-duration").html(`<h1> ${newName.duration} </h1>`);
-            $(".artist-pic").html(`<img class="cover" src="${newName.pic}">`);
-            $(".artist-link").html(`<a href ="${newName.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
-        });
-    }
-    create(song);
+        // $(".artist-name").append(`<h1> ${song.name} </h1>`);
+        // $(".artist-artist").append(`<h1> ${song.artist} </h1>`);
+        // $(".artist-duration").append(`<h1> ${song.duration} </h1>`);
+        // $(".artist-pic").append(`<img class="cover" src="${song.pic}">`);
+        // $(".artist-link").append(`<a href ="${song.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
 });
