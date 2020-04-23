@@ -9,12 +9,19 @@ let artistArray = [song1];
 
 
 function displayArtist(artistArray){
+     $(".playlist").empty();
     artistArray.forEach(function(artists){
-        $(".artist-name").append(`<h1>${artists.name}</h1>`);
-        $(".artist-artist").append(`<h1>${artists.artist}</h1>`);
-        $(".artist-duration").append(`<h1>${artists.duration}</h1>`);
-        $(".artist-pic").append(`<img class="cover" src="${artists.pic}">`);
-        $(".artist-link").append(`<a href ="${artists.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
+        $(".playlist").append(
+            `<div>
+            <h1>${artists.name}</h1>
+            <h1>${artists.artist}</h1>
+            <h1>${artists.duration}</h1>
+            <img class="cover" src="${artists.pic}">
+            <a href ="${artists.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>
+            </div>
+            `
+        );
+       
     console.log(artists);
     });
 }
@@ -47,15 +54,11 @@ $(".confirm").click(function(){
         pic : albumCover,
         link : songLink,
     };
-        // let songArray = [song];
+        
     artistArray.push(song);
     console.log(artistArray);
 
     displayArtist(artistArray);
 
-        // $(".artist-name").append(`<h1> ${song.name} </h1>`);
-        // $(".artist-artist").append(`<h1> ${song.artist} </h1>`);
-        // $(".artist-duration").append(`<h1> ${song.duration} </h1>`);
-        // $(".artist-pic").append(`<img class="cover" src="${song.pic}">`);
-        // $(".artist-link").append(`<a href ="${song.link}"> <img class="play" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg"> </a>`);
+       
 });
