@@ -28,16 +28,6 @@ function displayArtist(artistArray){
 
 displayArtist(artistArray);
 
-$(".easterEgg").click(function(){
-    $(".easterEgg").html("Our Playlist");
-    let imageUrl = ("communism/commie.jpg");
-    console.log(imageUrl);
-    $("body").css("background", "url(" + imageUrl + ")");
-    let soviet = document.getElementById("myAudio"); 
-    function playAudio() { 
-        x.play(); 
-    } 
- });
 
  
 $(".confirm").click(function(){
